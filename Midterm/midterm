@@ -1,1 +1,123 @@
 midterm 10/26/2021
+Question 1)
+
+Design the classes and interfaces given below that will keep track of books borrowed in a library. Detail class specifications (data members, methods and access modifiers) are described below. Please note the following requirements:
+
+Class Book:
+
+This abstract class should have the following three private data members.
+
+ 
+
+Fields: String title, double price, String publishYear
+
+Book (String title, double price, String publishYear); //Constructor
+
+Following are the public methods that this class should provide:
+
+Methods: getter and setters
+
+Add an abstract method to this class called description that will return a string.
+
+Interface iBorrowable:
+
+void setBorrowDate(int day)
+void setReturnDate(int day)
+boolean isAvailable(int day)
+
+In order to implement the iBorrowable interface define new data members to store the borrow and return dates,
+implement the setBorrowDate and setReturnDate methods to store values for these data members. Also implement the
+isAvailable method to return false if the given data is between or equal to the start and end dates, otherwise it returns true.
+
+Class Fiction:
+
+This class should extends book class and implement the interface.
+
+ 
+
+Fiction (String title, double price, String publishYear); //Constructor
+
+Also implement the abstract method in parent class.
+
+Sample description : “Frankenstein(title) all events are imaginary and not based on real facts”
+
+Class NonFiction:
+
+This class should extends book class and implement the interface.
+
+ 
+
+NonFiction (String title, double price, String publishYear); //Constructor
+
+ 
+
+Also implement the abstract method in parent class.
+
+ 
+
+Sample description : “Anne Frank(title) all events are true and based on real facts.”
+
+Class Reference:
+
+This class should extends book class.
+
+ 
+
+Fields: String category (example: dictionaries, encyclopedia)
+
+Reference (String title, double price, String publishYear, String category); //Constructor
+
+Method: getter and setter
+
+Also implement the abstract method in parent class.
+
+Sample description : “World Maps(title) all information is real.”
+
+ 
+
+ 
+
+Question 2)
+
+Implement singleton design for the code below
+
+class Printer {
+
+    private Printer() {     
+   }
+    public static Printer getInstance() {
+   }
+   class Main {
+       public static void main(String[] args) {
+          Printer p1;
+      // refers to the only object of Database
+          p1= Printer.getInstance();
+     
+          p1.getConnection();
+      }
+}
+
+O/P : Your Printer is working
+
+ 
+
+Question 3) For the given array, return the sum of all the numbers which are repeated.
+
+Ex: Input : array = {1,3,-1,3,4,-1}
+
+      Output : 3 + (-1) = 2
+
+ 
+
+Question 4) Given a string s, find the longest substring without repeating characters.
+
+Ex: Input: s = "abcabcbb"
+
+      Output: abc
+
+      Explanation: The answer is "abc", with the length of 3.
+
+Consraints:
+
+0 <= s.length <= 5 * 104
+s consists of English letters, digits, symbols and spaces.
